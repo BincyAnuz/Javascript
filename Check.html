@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text"id="number">
+  <button onclick="check()">Check</button>
+  <input type="text"id="result">
+
+
+  <script>
+    function check() {
+      var num = Number(document.getElementById("number").value)
+      if(num % 2 == 0) {
+        document.getElementById("result").value ="Even"
+      }
+      else {
+        document.getElementById("result").value ="Odd"
+      }
+    }
+  </script>
+</body>
+</html>

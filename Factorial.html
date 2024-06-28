@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Number <input type="text" id="number">
+  <button onclick="Factorial()">Find</button>
+  factorial <input type="text" id="result">
+
+  <script>
+    function Factorial() {
+      var number = Number(document.getElementById("number").value)
+      var result = 1
+      for(var i = 1; i <= number; i++){
+        result *= i
+      }
+      document.getElementById("result").value = result
+    }
+  </script>
+</body>
+</html>

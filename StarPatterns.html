@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="demo"></p>
+  <button onclick="RightHalf()">Right Half Pyramid</button>
+  <button onclick="LeftHalf()">Left Half Pyramid</button>
+  <button onclick="pyramid()">Full Pyramid</button>
+  <button onclick="InRightHalf()">Inverted Right Half Pyramid</button>
+  <button onclick="InLeftHalf()">Inverted Left Half Pyramid</button>
+  <button onclick="InPyramid()">Inverted Full Pyramid</button>
+
+
+  <script>
+    function RightHalf() {
+      let n = 5
+      let string = ""
+      for(let i=1; i<=n; i++) {
+        for(let j=1; j<=i; j++) {
+          string += "*"
+        }
+        string += "<br>"
+      }
+      document.getElementById("demo").innerHTML = string
+    }
+    function LeftHalf() {
+      let n = 5
+      let string = ""
+      for(let i=1; i<=n; i++) {
+       
+        for(let j=i; j<n; j++) {
+          string += "&nbsp&nbsp" 
+        }
+        for(let k=1; k<=i; k++){
+          string += "*"
+        }
+        string += "<br>"
+      }
+      document.getElementById("demo").innerHTML = string
+    }
+    function pyramid() {
+      let n = 5
+      let string = ""
+      for(let i=1; i<=n; i++) {
+       
+        for(let j=i; j<n; j++) {
+          string += "&nbsp&nbsp" 
+        }
+        for(let k=1; k<=(2*i-1); k++){
+          string += "*"
+        }
+        string += "<br>"
+      }
+      document.getElementById("demo").innerHTML = string
+    }
+    function InRightHalf(){
+      let n = 5
+      let string = ""
+      for(let i=1; i<=n; i++) {
+        for(let j=i; j<=n; j++) {
+          string += "*"
+        }
+        string += "<br>"
+      }
+      document.getElementById("demo").innerHTML = string
+    }
+    function InLeftHalf() {
+      let n = 5
+      let string = ""
+      for(let i=1; i<=n; i++) {
+       
+        for(let j=1; j<=i; j++) {
+          string += "&nbsp&nbsp" 
+        }
+        for(let k=i; k<=n; k++){
+          string += "*"
+        }
+        string += "<br>"
+      }
+      document.getElementById("demo").innerHTML = string
+    }
+    function InPyramid() {
+      let n = 5
+      let string = ""
+      let m=1
+      for(let i=n; i>=1; i--) {
+       
+        for(let j=1; j<=m; j++) {
+          string += "&nbsp&nbsp" 
+        }
+        for(let k=1; k<=(2*i-1); k++){
+          string += "*"
+        }
+        m++
+        string += "<br>"
+      }
+      document.getElementById("demo").innerHTML = string
+    }
+    
+  </script>
+</body>
+</html>

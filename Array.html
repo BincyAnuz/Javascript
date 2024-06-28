@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Array Operations</h3>
+  <p id="array1"></p>
+  <p id="array2"></p>
+  <p id="demo"></p>
+  <p id="length"></p>
+  <p id="demo0"></p>
+  <p id="demo1"></p>
+  <p id="tostring"></p>
+  <p id="fruits"></p>
+  <p id="newFruit"></p>
+  <p id="fruit"></p>
+  <p id="common"></p>
+  <p id="splice"></p>
+  <p id="slice"></p>
+
+  <script>
+    var array1 = [3,8,5,1,7,4]
+    array1.sort()
+    document.getElementById("array1").innerHTML = array1
+
+    var array2 = ['B','A','Z','F','K']
+    array2.sort()
+    array2.reverse()
+    document.getElementById("array2").innerHTML = array2
+    var text = " "
+    var array3 = ["dog","cat","cow","goat"]
+    var len = array3.length
+    var text = ""
+    for( i=0;i<len;i++){
+      text +=array3[i]+"<br>"
+    }
+    document.getElementById("demo0").innerHTML= text
+    document.getElementById("length").innerHTML = len
+    array3.push("lion")
+    document.getElementById("demo").innerHTML = array3
+    array3.pop()
+    document.getElementById("demo1").innerHTML = array3
+
+    const fruits = ["Banana","Orange","Apple","Mango"]
+    document.getElementById("tostring").innerHTML = fruits
+
+    const fruits1 = ["Banana","Orange","Apple","Mango"]
+    document.getElementById("fruits").innerHTML = fruits1.join("*")
+  
+    const fruit = ["Banana","Orange","Apple","Mango"]
+    fruit.unshift("Lemon","Pine")
+    document.getElementById("newFruit").innerHTML = fruit
+    
+    const fruit2 = ["Banana","Orange","Apple","Mango"]
+    fruit[2] = "Litchi"
+    document.getElementById("fruit").innerHTML = fruit
+
+    const boys = ["Varun","Manu"]
+    const girls = ["Anu","Sruthi"]
+    const common = boys.concat(girls)
+    document.getElementById("common").innerHTML = common
+
+    //splice method used to add an element into an array
+    const boy = ["Varun","Manu","Dheeraj","Bibin"]
+    boy.splice(2,2,"viraj","Arun")
+    document.getElementById("splice").innerText = boy
+
+    //slice() method create a new array without change source array
+    const boys1=["varun","arun","vipin","athul"]
+    const newBoys =boys1.slice(1);
+    document.getElementById("slice").innerHTML = newBoys
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Number <input type="text" id="number">
+  <button onclick="checkArmstrong()">Find</button>
+  <p id="demo"></p>
+
+
+
+  <script>
+    function checkArmstrong(){
+      var num = Number(document.getElementById("number").value)
+      var originalNum = num
+      var result = 0
+      while (originalNum != 0) {
+        rem = originalNum % 10; 
+        result += rem * rem * rem;
+        originalNum /= 10;
+    }
+    if (num == result)
+      document.getElementById("demo").innerHTML = "Given Number is Armstrong Number"
+    else
+      document.getElementById("demo").innerHTML = "Given Number is not an Armstrong Number"
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Find Multiplication Table of Number <input type="text" id ="number">
+  <button onclick="MultiTable()">Find</button>
+  <p id = "demo"></p>
+
+  <script>
+    function MultiTable(){
+    var num = Number(document.getElementById("number").value)
+    var mulTable = " "
+    for(var i=1; i<=10; i++){
+      mulTable += i +" * "+ num + " = " +i*num+"<br>"
+    }
+    document.getElementById("demo").innerHTML = mulTable
+  }
+    
+  </script>
+</body>
+</html>

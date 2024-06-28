@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Fibonocci series</h3>
+  Number <input type="text" id="number">
+  <button onclick="fibonocci()">Find</button>
+  <div id="fibonacci-series"></div>
+
+  <script>
+    function fibonocci(){
+      var num = Number(document.getElementById("number").value)
+      var t1 = 0
+      var t2 = 1
+      var nextTerm 
+      for(var i=1; i<=num; i++){
+        document.write(t1 +"<br>")
+        nextTerm=t1+t2
+        t1 = t2
+        t2 = nextTerm
+         
+      }
+    }
+  </script>
+</body>
+</html>

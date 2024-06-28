@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="fruit"> 
+  <button onclick="check()">Try it</button>
+  <p id="demo"></p>
+
+  <script>
+    function check() {
+    var fruit = document.getElementById("fruit").value
+    switch(fruit){
+      case "Apple" : document.getElementById("demo").innerHTML ="Apple is good"
+                   break;
+      case "Orange" : document.getElementById("demo").innerHTML ="Orange is good"
+                   break;
+      case "Mango" : document.getElementById("demo").innerHTML ="Mango is good is good"
+                   break;
+      default:     document.getElementById("demo").innerHTML = "Not Bad"
+    }
+    }
+  </script>
+</body>
+</html>
